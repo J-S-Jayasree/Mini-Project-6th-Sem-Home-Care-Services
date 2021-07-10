@@ -1,0 +1,312 @@
+<html>
+<head>
+<title> Book a Service !! </title>
+</head>
+<style>
+body{
+margin:0;
+background-color:lightgreen;
+
+}
+* {
+  box-sizing: border-box;
+}
+
+img {
+  vertical-align: middle;
+}
+
+/* Position the image container (needed to position the left and right arrows) */
+.container {
+  position: relative;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+  }
+
+/* Add a pointer when hovering over the thumbnail images */
+.cursor {
+  cursor: pointer;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 40%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: green;
+  font-size: 20px;
+  text-decoration : bold;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* Container for image text */
+.caption-container {
+  text-align: center;
+  background-color: #222;
+  padding: 2px 16px;
+  color: white;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Six columns side by side */
+.column {
+  float: left;
+  width: 16.66%;
+}
+
+/* Add a transparency effect for thumnbail images */
+.demo {
+  opacity: 0.6;
+}
+
+.active,
+.demo:hover {
+  opacity: 1;
+}
+</style>
+<body>
+
+<h2 style="text-align:center">Slideshow Gallery</h2>
+<p style="text-align:center;">
+<div class="container">
+  <div class="mySlides">
+    <div class="numbertext">1 / 6</div>
+    <img src="circle-cropped (1).png" style="width:100%; height:700px;">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">2 / 6</div>
+    <img src="circle-cropped (2).png" style="width:100%; height:700px;">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">3 / 6</div>
+    <img src="circle-cropped (3).png" style="width:100%; height:700px;">
+  </div>
+    
+  <div class="mySlides">
+    <div class="numbertext">4 / 6</div>
+    <img src="circle-cropped (4).png" style="width:100%; height:700px;">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">5 / 6</div>
+    <img src="circle-cropped (5).png" style="width:100%; height:700px;">
+  </div>
+    
+  <div class="mySlides">
+    <div class="numbertext">6 / 6</div>
+    <img src="circle-cropped (6).png" style="width:100%; height:700px;">
+  </div>
+ </p>   
+  <a class="prev" onclick="plusSlides(-1)"></a>
+  <a class="next" onclick="plusSlides(1)"></a>
+
+  <div class="caption-container">
+    <p id="caption"></p>
+  </div>
+</div>
+  <div class="row">
+    <div class="column">
+      <img class="demo cursor" src="circle-cropped (1).png" style="width:200px" onclick="currentSlide(1)" alt="Floor Cleaning">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="circle-cropped (2).png" style="width:200px" onclick="currentSlide(2)" alt="Surface Cleaning">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="circle-cropped (3).png" style="width:200px" onclick="currentSlide(3)" alt="Kitchen Cleaning">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="circle-cropped (4).png" style="width:200px" onclick="currentSlide(4)" alt="Carpet Cleaning">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="circle-cropped (5).png" style="width:200px" onclick="currentSlide(5)" alt="Window Cleaning">
+    </div>     
+    <div class="column">
+      <img class="demo cursor" src="circle-cropped (6).png" style="width:200px" onclick="currentSlide(6)" alt="Bathroom Cleaning">
+    </div>
+  </div>
+  
+  
+  
+ <h1>Please select the required options :</h1>
+ <script>
+ function print(serviceh1){
+//var e = document.getElementById("serviceh");
+var strUser = serviceh1.value;
+if(strUser==1)
+{
+alert("3 BHK "+"\n"+"Carpet Area : 800");
+}
+if(strUser==2)
+{
+alert("2 BHK "+"\n"+"Carpet Area : 800");
+}
+if(strUser==3)
+{
+alert("3 BHK "+"\n"+"Carpet Area : 1200");
+}
+}
+ </script>
+<table border="5px" align="center">
+<tr>
+<th>Services</th>
+<th>Type</th>
+<th>Amount</th>
+<th>Book Service</th>
+</tr>
+
+<tr>
+<td rowspan="3">House Deep Cleaning</td>
+ <td>
+Service 1<br><ul> <li>3 BHK</li><li>Carpet Area : 800 sqft </li></ul></td>
+<td>Rs 2000</td>
+<td><a href="http://localhost/Mini%20project/About/Payment.html" target="_blank"><input type="button" value="Book Service" id="b1" align="center"></a></td>
+</tr>
+
+<tr>
+<td>
+Service 2<br><ul> <li>2 BHK</li><li>Carpet Area : 800 sqft </li></ul></td>
+<td>Rs 1000</td>
+<td><a href="http://localhost/Mini%20project/About/Payment.html" target="_blank"><input type="button" value="Book Service" id="b2" align="center"></a></td>
+</tr>
+
+<tr>
+<td>
+Service 3 <br><ul> <li>3 BHK</li><li>Carpet Area : 1200 sqft </li></ul></td>
+<td>Rs 6000</td>
+<td><a href="http://localhost/Mini%20project/About/Payment.html" target="_blank"><input type="button" value="Book Service" id="b3" align="center"></a></td>
+</tr>
+
+<tr>
+<td rowspan="2">House Keeping</td>
+<td>Service 1<ul> <li>Hours : 12 </li></ul></td>
+<td >Rs 10000</td>
+<td><a href="http://localhost/Mini%20project/About/Payment.html" target="_blank"><input type="button" value="Book Service" id="b4" align="center"></a></td>
+</tr>
+
+<tr>
+<td>Service 2<ul> <li>Hours : 24 </li></ul></td>
+<td> Rs 20000</td>
+<td><a href="http://localhost/Mini%20project/About/Payment.html" target="_blank"><input type="button" value="Book Service" id="b5" align="center"></a></td>
+</tr>
+
+<tr>
+<td rowspan="2">Gardening</td>
+<td>Service 1<ul> <li>GardenArea : 1000 sqft </li></ul></td>
+<td>Rs 10000</td>
+<td><a href="http://localhost/Mini%20project/About/Payment.html" target="_blank"><input type="button" value="Book Service" id="b6" align="center"></a></td>
+</tr>
+
+<tr>
+<td>Service 2<ul> <li>GardenArea : 2000 sqft </li></ul></td>
+<td>Rs 20000</td>
+<td><a href="http://localhost/Mini%20project/About/Payment.html" target="_blank"><input type="button" value="Book Service" id="b7" align="center"></a></td>
+</tr>
+
+<tr>
+<td rowspan="2">Vehicle Cleaning</td>
+<td>Two Wheeler Service <br></td>
+<td>Rs 10000</td>
+<td><a href="http://localhost/Mini%20project/About/Payment.html" target="_blank"><input type="button" value="Book Service" id="b8" align="center"></a></td>
+</tr>
+
+<tr>
+<td>Four Wheeler Service<br></td>
+<td>Rs 15000</td>
+<td><a href="http://localhost/Mini%20project/About/Payment.html" target="_blank"><input type="button" value="Book Service" id="b9" align="center"></a></td>
+</tr>
+
+</table>
+<!--<form>
+
+  <input type="checkbox" id="serv1" name="serv1" value="HouseCleaning">
+  <label for="serv1"> House Deep Cleaning</label><br>
+  <input type="checkbox" id="serv2" name="serv2" value="HouseKeeping">
+  <label for="serv2"> House Keeping</label><br>
+  <input type="checkbox" id="serv3" name="serv3" value="Gardening">
+  <label for="serv3"> Garderning</label><br>
+  <input type="checkbox" id="serv4" name="serv4" value="VehicleCleaning">
+  <label for="serv4"> Vehicle Cleaning </label><br><br>
+  
+  <input type="submit" value="Submit">
+</form>
+
+
+
+
+
+
+
+
+
+-->
+</body>
+
+<script>
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("demo");
+  var captionText = document.getElementById("caption");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+  captionText.innerHTML = dots[slideIndex-1].alt;
+}
+</script>
+</html>

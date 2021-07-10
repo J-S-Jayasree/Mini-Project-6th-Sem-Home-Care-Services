@@ -1,0 +1,259 @@
+<html>
+<head>
+<link href="//netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+</head>
+<style>
+	
+#myDIV {
+  width: 100%;
+  
+  text-align: center;
+  background-image:url('bg1.jpg');
+  background-repeat:no-repeat;
+  background-size:cover;
+
+}
+
+.centered-form{
+	margin-top: 200px;
+	
+}
+body{
+ background-image:url('bg2.jpg');
+  background-repeat:no-repeat;
+  background-size:cover;
+  }
+
+.centered-form .panel{
+	background: rgba(255, 255, 255, 0.8);
+	box-shadow: rgba(0, 0, 0, 0.3) 20px 20px 20px;
+}
+.modal {
+        display: none;
+        position: fixed;
+        z-index: 8;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+        background-color: rgb(0, 0, 0);
+        background-color: rgba(0, 0, 0, 0.4);
+      }
+      .modal-content {
+        margin: 50px auto;
+        border: 1px solid #999;
+        width: 60%;
+      }
+	  input,
+      textarea {
+        width: 90%;
+        padding: 10px;
+        margin-bottom: 20px;
+        border: 1px solid #1c87c9;
+        outline: none;
+      }
+      .contact-form button {
+        width: 100%;
+        padding: 10px;
+        border: none;
+        background: #1c87c9;
+        font-size: 16px;
+        font-weight: 400;
+        color: #fff;
+      }
+      button:hover {
+        background: #2371a0;
+      }
+      .close {
+        color: #aaa;
+        float: right;
+        font-size: 28px;
+        font-weight: bold;
+      }
+      .close:hover,
+      .close:focus {
+        color: black;
+        text-decoration: none;
+        cursor: pointer;
+      }
+      button.button {
+        background: white;
+		position:center;
+		align:center;
+        outline: 3px;
+        border-right: 5px;
+        border-left: 5px;
+		border-top:5px;
+		padding-top:50px;
+        border-bottom: #02274a 1px solid;
+        padding: 0 0 3px 0;
+        font-size: 16px;
+        cursor: pointer;
+      }
+      button.button:hover {
+        border-bottom: #a99567 1px solid;
+        color: #a99567;
+      }
+	    .passwordInput{
+            margin-top: 5%; 
+            text-align :center;
+        }
+
+        .displayBadge{
+            margin-top: 5%; 
+            display: none; 
+            text-align :center;
+        }
+</style>
+<body>
+<p>
+      <button class="button" data-modal="modalOne"><center>Register Here !!!</center></button>
+    </p>
+	<div id="modalOne" class="modal">
+      <div class="modal-content">
+        <div class="contact-form">   
+          <a class="close">&times;</a><!-- http://localhost/Mini%20Project/Insertintodb.php -->
+<div id="myDIV">
+
+<form name="register" method="post" onsubmit="return validateform()" action="http://localhost/Mini%20Project/Insertintodb.php" >
+<div class="container">
+        <div class="row centered-form">
+        <div class="col-xs-1 col-sm-1 col-md-7 col-sm-offset-1 col-md-offset-1">
+        	<div class="panel panel-default">
+        		<div class="panel-heading">
+			    		<h3 class="panel-title"><b>Please register to book Services !! <small>It's free!</small></b></h3>
+			 			</div>
+			 			<div class="panel-body">
+			    		<form  role="form" id="usrform">
+			    			<div class="row">
+			    				<div class="col-xs-6 col-sm-6 col-md-6">
+			    					<div class="form-group">
+			                <input type="text" name="first_name" id="first_name" class="form-control input-sm" required placeholder="First Name">
+			    					</div>
+			    				</div>
+			    				
+			    			</div>
+
+			    			<div class="form-group">
+			    				<input type="email" name="email" id="email" class="form-control input-sm" required placeholder="Email Address">
+			    			</div>
+
+			    			<div class="row">
+			    				<div class="col-xs-6 col-sm-6 col-md-6">
+			    					<div class="form-group">
+			    						<input type="password" name="password" id="password" required class="form-control input-sm" placeholder="Password">
+			    					</div>
+			    				</div>
+			    				<div class="col-xs-6 col-sm-6 col-md-6">										
+			    					<div class="form-group">
+			    						<input type="password" name="password_confirmation" id="password_confirmation" required class="form-control input-sm" placeholder="Confirm Password">
+			    					</div>								
+			    				</div>
+			    			</div>
+			    			<div class="row">
+			    				<div class="col-xs-6 col-sm-6 col-md-6">
+			    					<div class="form-group">
+			    						<input type="text" name="phone" id="phone" class="form-control input-sm" required placeholder="Phone">
+			    					</div>
+			    				</div>
+			    			</div>
+			    			
+			    			<div class="row">
+			    				<div class="col-xs-0 col-sm-6 col-md-4">
+			    					<div class="form-group">
+			    					<input type="text" name="comment" id="comment" style="width: 600px;height:50px;" class="form-control input-sm" required placeholder="Enter your Address">
+			    					</div>
+			    				</div>
+			    			</div>    			
+			    			<input type="submit" value="Register" class="btn btn-info btn-block">		    		
+			    		</form>
+			    	</div>
+	    		</div>
+    		</div>
+    	</div>
+    </div>
+</form>
+<script type="text/javascript">
+function myFunction() {
+  var x = document.getElementById("myDIV");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+}
+let modalBtns = [...document.querySelectorAll(".button")];
+      modalBtns.forEach(function(btn) {
+        btn.onclick = function() {
+          let modal = btn.getAttribute('data-modal');
+          document.getElementById(modal)
+            .style.display = "block";
+        }
+      });
+      let closeBtns = [...document.querySelectorAll(".close")];
+      closeBtns.forEach(function(btn) {
+        btn.onclick = function() {
+          let modal = btn.closest('.modal');
+          modal.style.display = "none";
+        }
+      });
+      window.onclick = function(event) {
+        if(event.target.className === "modal") {
+          event.target.style.display = "none";
+        }
+      } 
+
+function validateform(){
+var name=document.register.first_name.value;
+var password=document.register.password.value;
+var confirm=document.register.password_confirmation.value;
+var emailAddr=document.register.email.value;
+var ph=document.getElementById("phone").value;
+
+var mailformat= /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+var address=document.getElementById("comment").value;
+if(name==null || name==""){
+alert("Name cannot be blank");
+return false;
+}
+
+if((!emailAddr.match(mailformat))&& emailAddr==""||emailAddr==null)
+{
+alert("You have entered an invalid email address!");
+document.register.email.focus();
+return false;
+}
+
+if(password.length>8||password.length<8){
+alert("Password must be 8 characters long.");
+return false;
+}
+
+if(password!=confirm)
+{
+alert("Password must be same !");
+return false;
+}
+
+if(ph==""||ph.length<10||ph.length>10)
+{
+alert("Phone Number is invalid");
+return false;
+}
+
+if(address==""){
+alert("Address Field cannot be empty.");
+return false;
+}
+
+}
+</script>
+</div>
+</div>
+</div>
+</div>
+</body>
+</html>
